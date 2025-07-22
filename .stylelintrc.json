@@ -10,6 +10,9 @@
   "rules": {
     "color-hex-length": "long",
     "@stylistic/color-hex-case": "upper",
-    "@stylistic/indentation": 4
+    "@stylistic/indentation": 4,
+    "selector-class-pattern": [
+      "^[a-z][a-z0-9]*(__[a-z0-9]+)*$"
+    ]
   }
 }

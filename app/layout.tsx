@@ -1,21 +1,16 @@
 import type {Metadata} from "next";
-import {Geist, Geist_Mono} from "next/font/google";
+import {Open_Sans} from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
+const openSans = Open_Sans({
+    variable: "--font-open-sans",
+    subsets: ["latin", "cyrillic"]
 });
 
 export const metadata: Metadata = {
-    title: "Блог",
+    title: "Мой блог",
     description: "Добро пожаловать в мой блог!",
-    keywords: "Блог, программирование, front-end",
+    keywords: "Блог, программирование, front-end, главная, статьи",
     openGraph: {
         title: "my_blog",
         description: "Добро пожаловать в мой блог!",
@@ -34,7 +29,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ru">
-            <body className={`${geistSans.variable} ${geistMono.variable}`}>
+            <body className={`${openSans.variable}`}>
                 {children}
             </body>
         </html>
