@@ -56,7 +56,7 @@ export const Card = ({
                 </div>
                 <div className={styles.footer}>
                     <span>{timer}</span>
-                    <a className={styles.link} href="#">
+                    <a className={styles.link} href={href}>
                         Читать
                         <Image src={ArrowIcon} alt="arrow"/>
                     </a>
