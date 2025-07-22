@@ -1,28 +1,14 @@
 :root {
-    --background: #FFFFFF;
-    --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0A0A0A;
-        --foreground: #EDEDED;
-    }
-}
-
-html,
-body {
-    overflow-x: hidden;
-    max-width: 100vw;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: var(--foreground);
-
-    background: var(--background);
+    --black: #000000;
+    --white: #FFFFFF;
+    --c-black: #2C2C2C;
+    --c-black-20: #6E6E6E;
+    --c-clack-30: #4B4B4B;
+    --c-blue: #E5F4FF;
+    --primary: #1473E6;
+    --primary-hover: #0F58B1;
+    --border: #F5F5F5;
+    --font-family: "Open Sans", arial, sans-serif;
 }
 
 * {
@@ -32,12 +18,11 @@ body {
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
+body {
+    font-family: var(--font-family);
+    font-weight: 400;
 }

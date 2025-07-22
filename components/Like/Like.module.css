@@ -1,0 +1,12 @@
+.like {
+    cursor: pointer;
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.like__num {
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--c-black-20);
+}
