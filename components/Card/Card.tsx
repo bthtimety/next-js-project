@@ -13,6 +13,7 @@ export const Card = ({
                          date,
                          timer,
                          likes_counter,
+                         like_id,
                          href,
                          ...props
                      }: CardProps): React.ReactElement => {
@@ -40,10 +41,9 @@ export const Card = ({
                             <span>{date}</span>
                         </div>
                     </div>
-                    <div>
-                        <Like>
-                            {likes_counter}
-                        </Like>
+                    <div className={styles.likes}>
+                        <span className={styles.like__num}>{likes_counter}</span>
+                        <Like id={like_id} isButton={false} />
                     </div>
                 </div>
                 <div className={styles.main}>

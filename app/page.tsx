@@ -21,6 +21,7 @@ export default function Home() {
                     date="1 месяц назад"
                     timer="3 минуты"
                     likes_counter={4}
+                    like_id="1"
                     href="#"
                 />
             </main>
