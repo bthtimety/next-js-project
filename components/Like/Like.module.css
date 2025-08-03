@@ -1,12 +1,52 @@
 .like {
-    cursor: pointer;
-    display: flex;
-    gap: 2px;
-    align-items: center;
+    pointer-events: none;
+    display: inline-block;
+    border: none;
+    background-color: transparent;
 }
 
-.like__num {
-    font-size: 12px;
-    line-height: 100%;
-    color: var(--c-black-20);
+.like__button {
+    pointer-events: auto;
+    cursor: pointer;
+
+    padding: 16px;
+    border: 1px solid var(--border-black);
+    border-radius: 100%;
+
+    background-color: var(--white);
+
+    transition: all 0.2s ease;
+}
+
+.like__button:hover {
+    background-color: var(--border-black);
+}
+
+.like__button svg {
+    stroke: var(--border-black);
+}
+
+.like__button:hover svg {
+    stroke: var(--white);
+}
+
+.like__button.is__liked {
+    background-color: var(--border-black);
+}
+
+.like__button.is__liked:hover {
+    background-color: var(--black);
+}
+
+.like__button.is__liked svg {
+    stroke: var(--white);
+}
+
+.svg {
+    display: flex;
+}
+
+.loading {
+    pointer-events: none;
+    opacity: 0.5;
 }
