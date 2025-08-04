@@ -1,6 +1,10 @@
+import React from "react";
+import Image from "next/image";
 import type {Metadata} from "next";
 import {Open_Sans} from "next/font/google";
 import "./globals.css";
+import styles from "./header.module.css";
+import GitHubIcon from "../public/icon/github.svg";
 
 const openSans = Open_Sans({
     variable: "--font-open-sans",
@@ -30,6 +34,17 @@ export default function RootLayout({
     return (
         <html lang="ru">
             <body className={`${openSans.variable}`}>
+                <header className={styles.header}>
+                    <p className={styles.header__title}>.my_blog</p>
+                    <div className={styles.header__github}>
+                        <a href="https://github.com/bthtimety" target="_blank" rel="noopener noreferrer">
+                            <Image
+                                src={GitHubIcon}
+                                alt="GitHub"
+                            />
+                        </a>
+                    </div>
+                </header>
                 {children}
             </body>
         </html>
