@@ -12,19 +12,17 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Home() {
     return (
-        <div className={styles.page}>
-            <main className={styles.main}>
-                <Card
-                    title="Как работать с CSS Grid"
-                    description="Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы.."
-                    tags={["Front-end"]}
-                    date="1 месяц назад"
-                    timer="3 минуты"
-                    likes_counter={4}
-                    like_id="1"
-                    href="#"
-                />
-            </main>
-        </div>
+        <main className={styles.main}>
+            <Card
+                title="Как работать с CSS Grid"
+                description="Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы.."
+                tags={["Front-end"]}
+                date="1 месяц назад"
+                timer="3 минуты"
+                likes_counter={4}
+                like_id="1"
+                href="#"
+            />
+        </main>
     );
 }

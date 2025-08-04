@@ -2,11 +2,7 @@ import React from "react";
 import {HTagProps} from "./HTag.props";
 import styles from "./HTag.module.css";
 
-export const HTag = ({
-                         tag,
-                         children,
-                         ...props
-                     }: HTagProps): React.ReactElement => {
+export const HTag = ({tag, children, ...props}: HTagProps): React.ReactElement => {
     switch (tag) {
         case "h1":
             return (

@@ -4,7 +4,7 @@ import {CardProps} from "./Card.props";
 import {HTag, P, Like} from "..";
 import styles from "./Card.module.css";
 import ArrowIcon from "./arrow.svg";
-import CardCoverImg from "./CardCover.png"
+import CardCoverImg from "./CardCover.png";
 
 export const Card = ({
                          title,
@@ -43,7 +43,7 @@ export const Card = ({
                     </div>
                     <div className={styles.likes}>
                         <span className={styles.like__num}>{likes_counter}</span>
-                        <Like id={like_id} isButton={false} />
+                        <Like id={like_id} isButton={false}/>
                     </div>
                 </div>
                 <div className={styles.main}>
