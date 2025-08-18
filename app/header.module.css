@@ -12,16 +12,3 @@
     font-size: 40px;
     font-weight: 300;
 }
-
-.header__github {
-    width: 24px;
-    height: 24px;
-
-    a {
-        width: 100%;
-
-        img {
-            width: 100%;
-        }
-    }
-}
