@@ -1,0 +1,12 @@
+.github {
+    width: 24px;
+    height: 24px;
+
+    a {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
