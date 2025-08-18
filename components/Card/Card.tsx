@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import {CardProps} from "./Card.props";
 import {HTag, P, Like} from "..";
@@ -56,10 +57,10 @@ export const Card = ({
                 </div>
                 <div className={styles.footer}>
                     <span>{timer}</span>
-                    <a className={styles.link} href={href}>
+                    <Link className={styles.link} href={`post/${href}`}>
                         Читать
                         <Image src={ArrowIcon} alt="arrow"/>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

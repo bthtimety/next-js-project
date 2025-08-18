@@ -2,10 +2,9 @@ import React from "react";
 import type {Metadata} from "next";
 import {Open_Sans} from "next/font/google";
 import "./globals.css";
-import { GitHub } from "@/components/GitHub/GitHub";
-import styles from "./header.module.css";
-import { GitHubProvider } from "@/contexts/GitHub.context";
-import { BASE_GIT } from "@/constants";
+import {Header} from "@/components/Header/Header"
+import {GitHubProvider} from "@/contexts/GitHub.context";
+import {BASE_GIT} from "@/constants";
 
 const openSans = Open_Sans({
     variable: "--font-open-sans",
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
         type: "website"
     },
     icons: {
-        icon: "../favicon.ico"
+        icon: "/favicon.ico"
     }
 };
 
@@ -36,10 +35,7 @@ export default function RootLayout({
         <html lang="ru">
             <body className={`${openSans.variable}`}>
                 <GitHubProvider link={BASE_GIT}>
-                    <header className={styles.header}>
-                        <p className={styles.header__title}>.my_blog</p>
-                        <GitHub />
-                    </header>
+                    <Header />
                 </GitHubProvider>
                 {children}
             </body>
