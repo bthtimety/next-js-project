@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./page.module.css";
 import {Metadata} from "next";
-import { Card } from "@/components";
-import { getPosts } from "@/api/posts";
+import {Card} from "@/components";
+import {getPosts} from "@/api/posts";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
@@ -26,7 +26,7 @@ export default async function Home() {
                         timer="3 минуты"
                         likes_counter={4}
                         like_id={post.userId}
-                        href="#"
+                        href={post.id}
                     ></Card>
                 </React.Fragment>
             ))}
