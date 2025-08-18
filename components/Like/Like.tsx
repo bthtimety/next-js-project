@@ -16,7 +16,7 @@ export const Like = ({id, isButton, ...props}: LikeProps): React.ReactElement =>
         setLoading(true);
         try {
             const newState = !isLiked;
-            const res = await fetch(url, {
+            const res = await fetch(url+"/posts", {
                 method: "PATCH",
                 headers: {
                     "Content-type": "application/json; charset=UTF-8"

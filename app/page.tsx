@@ -1,6 +1,8 @@
+import React from "react";
 import styles from "./page.module.css";
 import {Metadata} from "next";
 import { Card } from "@/components";
+import { getPosts } from "@/api/posts";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
@@ -10,39 +12,24 @@ export async function generateMetadata(): Promise<Metadata> {
     };
 }
 
-export default function Home() {
+export default async function Home() {
+    const posts = await getPosts();
     return (
         <main className={styles.main}>
-            <Card
-                title="Как работать с CSS Grid"
-                description="Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы.."
-                tags={["Front-end"]}
-                date="1 месяц назад"
-                timer="3 минуты"
-                likes_counter={4}
-                like_id="1"
-                href="#"
-            />
-            <Card
-                title="Как работать с CSS Grid"
-                description="Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы.."
-                tags={["Front-end"]}
-                date="1 месяц назад"
-                timer="3 минуты"
-                likes_counter={4}
-                like_id="1"
-                href="#"
-            />
-            <Card
-                title="Как работать с CSS Grid"
-                description="Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы.."
-                tags={["Front-end"]}
-                date="1 месяц назад"
-                timer="3 минуты"
-                likes_counter={4}
-                like_id="1"
-                href="#"
-            />
+            {posts.map((post, index) => (
+                <React.Fragment key={index}>
+                    <Card
+                        title={post.title}
+                        description={post.body}
+                        tags={["Front-end"]}
+                        date="1 месяц назад"
+                        timer="3 минуты"
+                        likes_counter={4}
+                        like_id={post.userId}
+                        href="#"
+                    ></Card>
+                </React.Fragment>
+            ))}
         </main>
     );
 }
