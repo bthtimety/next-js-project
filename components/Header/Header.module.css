@@ -12,3 +12,8 @@
     font-size: 40px;
     font-weight: 300;
 }
+
+.header__link {
+    color: var(--c-black);
+    text-decoration: none;
+}

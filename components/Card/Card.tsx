@@ -5,7 +5,7 @@ import {CardProps} from "./Card.props";
 import {HTag, P, Like} from "..";
 import styles from "./Card.module.css";
 import ArrowIcon from "./arrow.svg";
-import CardCoverImg from "./CardCover.png";
+import CardCoverImg from "../../public/assets/CardCover.png";
 
 export const Card = ({
                          title,

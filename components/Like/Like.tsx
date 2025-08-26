@@ -12,11 +12,11 @@ export const Like = ({id, isButton, ...props}: LikeProps): React.ReactElement =>
     const [loading, setLoading] = useState<boolean>(false);
 
     const patchLike = async () => {
-        const url = "https://jsonplaceholder.typicode.com/posts/"+ id;
+        const url = "https://jsonplaceholder.typicode.com/posts/";
         setLoading(true);
         try {
             const newState = !isLiked;
-            const res = await fetch(url+"/posts", {
+            const res = await fetch(url+"/post/"+id, {
                 method: "PATCH",
                 headers: {
                     "Content-type": "application/json; charset=UTF-8"
