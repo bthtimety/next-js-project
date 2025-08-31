@@ -3,15 +3,6 @@
     padding: 25px 46px;
 }
 
-.post__title {
-    font-size: 24px;
-    font-weight: 700;
-    
-    @media (width >= 480px) {
-        font-size: 34px;
-    }
-}
-
 .post__header {
     display: flex;
     gap: 9px;
@@ -56,4 +47,15 @@
     span {
         font-size: 18px;
     }
+}
+
+.comments {
+    margin-top: 34px;
+}
+
+.comments__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 20px 0;
 }
