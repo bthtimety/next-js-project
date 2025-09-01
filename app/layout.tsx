@@ -2,7 +2,7 @@ import React from "react";
 import type {Metadata} from "next";
 import {Open_Sans} from "next/font/google";
 import "./globals.css";
-import {Header} from "@/components/Header/Header"
+import {Header} from "@/components/Header/Header";
 import {GitHubProvider} from "@/contexts/GitHub.context";
 import {BASE_GIT} from "@/constants";
 

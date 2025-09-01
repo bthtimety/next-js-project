@@ -48,7 +48,7 @@ export const Card = ({
                     </div>
                 </div>
                 <div className={styles.main}>
-                    <HTag tag="h2" className={styles.title}>
+                    <HTag tag="h3" className={styles.title}>
                         {title}
                     </HTag>
                     <div className={styles.description}>

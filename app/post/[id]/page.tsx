@@ -1,8 +1,10 @@
 import {getPost} from "@/api/post";
+import { getComments } from "@/api/comments";
 import {Metadata} from "next";
 import React from "react";
 import Image from "next/image";
-import {Like} from "@/components";
+import {Like, HTag} from "@/components";
+import {Comment} from "@/components/Comment/Comment";
 import styles from "./page.module.css";
 import parse from "html-react-parser";
 
@@ -21,10 +23,11 @@ export async function generateMetadata({params}: { params: postByIdProps; }): Pr
 export default async function DetailPost({params}: { params: postByIdProps; }) {
     const { id } = await params;
     const post = await getPost(id);
+    const comments = await getComments(id);
     return (
         <div className={styles.post}>
             <div className={styles.content}>
-                <h1 className={styles.post__title}>{post.title}</h1>
+                <HTag tag="h1">{post.title}</HTag>
                 <div className={styles.post__header}>
                     <span>Front-end</span>
                     <span>·</span>
@@ -46,6 +49,16 @@ export default async function DetailPost({params}: { params: postByIdProps; }) {
                 <div className={styles.like}>
                     <span>Понравилось? Жми</span>
                     <Like isButton={true} id={id} />
+                </div>
+                <div className={styles.comments}>
+                    <HTag tag="h2">Комментарии</HTag>
+                    <div className={styles.comments__list}>
+                        {comments.map((comment, index) => (
+                            <div key={index}>
+                                <Comment comment={comment} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
