@@ -1,5 +1,6 @@
 import {getPost} from "@/api/post";
-import { getComments } from "@/api/comments";
+import {getComments} from "@/api/comments";
+import {Form} from "@/components/Form/Form";
 import {Metadata} from "next";
 import React from "react";
 import Image from "next/image";
@@ -59,6 +60,7 @@ export default async function DetailPost({params}: { params: postByIdProps; }) {
                             </div>
                         ))}
                     </div>
+                    <Form className={styles.form} id={post.id} />
                 </div>
             </div>
         </div>

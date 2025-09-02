@@ -1,5 +1,5 @@
 import React from "react";
-import { CommentProps } from "./Comment.props";
+import {CommentProps} from "./Comment.props";
 import styles from "./Comment.module.css";
 
 export const Comment = ({

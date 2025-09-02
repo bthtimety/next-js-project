@@ -1,0 +1,31 @@
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    padding: 20px 30px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+.input__error {
+    border-color: red;
+}
+
+.input::placeholder {
+    color: #4E5C7C;
+    opacity: 0.5;
+}
+
+.error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    font-size: 12px;
+    color: red;
+}
